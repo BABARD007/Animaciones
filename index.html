@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nickelodeon - Mundo de Personajes</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #ff6f00; /* Naranja Nickelodeon */
+      padding: 20px;
+    }
+
+    header img {
+      width: 200px;
+    }
+
+    h2 {
+      color: #00cc66;
+      font-size: 2em;
+      margin: 20px 0;
+    }
+
+    .personajes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .personaje {
+      width: 200px;
+      height: 200px;
+      transition: all 1.5s ease-in-out;
+    }
+
+    .personaje:hover {
+      width: 250px;
+      height: 250px;
+      transform: rotate(360deg);
+    }
+
+    /* Cambio de forma */
+    @keyframes forma {
+      0%, 100% { border-radius: 0%; }
+      50% { border-radius: 50%; }
+    }
+
+    .animar-forma {
+      animation: forma 2s ease-in-out infinite;
+    }
+
+    .animar-reversa {
+      animation: forma 2s ease-in-out infinite reverse;
+    }
+
+    .delay {
+      transition-delay: 1s;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="Logo Nickelodeon">
+  </header>
+
+  <h2>Personajes Divertidos de Nickelodeon</h2>
+
+  <section class="personajes">
+    <img class="personaje animar-forma" src="bob.jpg" alt="Bob Esponja">
+
+    <img class="personaje animar-forma" src="personaje2.jpg" alt="Patricio Estrella">
+
+    <img class="personaje animar-reversa" src="personaje3.webp" alt="Arenita Mejillas">
+
+    <img class="personaje delay animar-forma" src="personaje4.png" alt="Calamardo">
+
+    <img class="personaje animar-forma" src="personaje5.webp" alt="Jimmy Neutrón">
+
+    <img class="personaje animar-reversa" src="personaje6.jpg" alt="Timmy Turner">
+  </section>
+
+</body>
+</html>
